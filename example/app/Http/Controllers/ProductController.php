@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -11,7 +12,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return "Hello World!";
+        $products = DB::select("SELECT * FROM products");
+        return $products;
     }
 
     /**
@@ -19,7 +21,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        // 未使用
     }
 
     /**
@@ -27,7 +29,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 未使用
     }
 
     /**
@@ -35,7 +37,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // 未使用
     }
 
     /**
@@ -43,7 +45,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // 未使用
     }
 
     /**
@@ -51,7 +53,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // 未使用
     }
 
     /**
@@ -59,6 +61,6 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // 未使用
     }
 }
