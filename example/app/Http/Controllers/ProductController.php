@@ -12,8 +12,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = DB::select("SELECT * FROM products");
-        return $products;
+        $products = DB::select("SELECT * FROM products ORDER BY id");
+        return response($products,200);
     }
 
     /**
